@@ -1,3 +1,14 @@
+---
+title: Pokémon Team Recommender - Collaborative Filtering
+emoji: ⚔️
+colorFrom: purple
+colorTo: blue
+sdk: gradio
+sdk_version: 4.0.0
+app_file: app.py
+pinned: false
+---
+
 # Pokémon Team Recommender - Collaborative Filtering
 
 A **collaborative filtering** approach to Pokémon team recommendations.
