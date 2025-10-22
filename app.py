@@ -5,12 +5,17 @@ Uses team co-occurrence patterns to recommend Pokémon combinations.
 """
 
 import json
+import logging
 from pathlib import Path
 
 import gradio as gr
 
+from src.app.explanations import generate_cf_explanation
 from src.cf_model import CollaborativeFilteringModel
 from src.recommender import CFTeamRecommender
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
 # Initialize model
 print("Loading collaborative filtering model...")
@@ -50,18 +55,47 @@ with open("data/pokedex.json") as f:
 print("Model loaded successfully!")
 
 
-def recommend_team(mon1: str, mon2: str, mon3: str) -> str:
+def recommend_team(mon1: str, mon2: str, mon3: str) -> tuple[str, str]:
     """Generate team recommendations using collaborative filtering."""
     if not all([mon1, mon2, mon3]):
-        return "❌ Please select all 3 Pokémon."
+        return "❌ Please select all 3 Pokémon.", ""
 
     input_team = [mon1.strip(), mon2.strip(), mon3.strip()]
 
+    # Validate Pokemon names against available list
+    unknown = [m for m in input_team if m not in AVAILABLE_POKEMON]
+    if unknown:
+        suggestion = "❌ Unknown Pokémon: " + ", ".join(unknown) + "\n\n"
+        suggestion += "**Try these instead:**\n"
+        suggestion += ", ".join(AVAILABLE_POKEMON[:8]) + ", ..."
+        suggestion += f"\n\n*({len(AVAILABLE_POKEMON)} total)*"
+        return suggestion, ""
+
     try:
         recommendations = recommender.recommend(input_team, top_k=5, candidate_pool_size=12)
-
+    except ValueError as e:
+        error_msg = str(e)
+        suggestion = f"❌ {error_msg}\n\n"
+        suggestion += "**Available Pokémon in Gen 9 OU:**\n"
+        suggestion += ", ".join(AVAILABLE_POKEMON[:8]) + ", ..."
+        suggestion += f"\n\n*({len(AVAILABLE_POKEMON)} total)*"
+        return suggestion, ""
+    except Exception:
+        logging.exception("Unexpected error in recommend_team")
+        return "❌ Unexpected error.\n\nPlease check your selections and try again.", ""
+    else:
         if not recommendations:
-            return "No recommendations found. Try different Pokémon!"
+            return "No recommendations found. Try different Pokémon!", ""
+
+        # Generate explanation for top recommendation
+        top_rec = recommendations[0]
+        explanation = generate_cf_explanation(
+            user_team=input_team,
+            recommended_trio=top_rec.trio,
+            cf_score=top_rec.cf_score,
+            team_cohesion=top_rec.team_cohesion,
+            cf_model=cf_model,
+        )
 
         # Format results with sprites
         result = f"## Top {len(recommendations)} Recommendations\n\n"
@@ -85,18 +119,7 @@ def recommend_team(mon1: str, mon2: str, mon3: str) -> str:
             result += f"- Team Cohesion: {rec.team_cohesion:.3f}\n\n"
             result += "---\n\n"
 
-        return result
-
-    except ValueError as e:
-        error_msg = str(e)
-        suggestion = f"❌ {error_msg}\n\n"
-        suggestion += "**Available Pokémon in Gen 9 OU:**\n"
-        suggestion += ", ".join(AVAILABLE_POKEMON[:8]) + ", ..."
-        suggestion += f"\n\n*({len(AVAILABLE_POKEMON)} total)*"
-        return suggestion
-
-    except Exception as e:
-        return f"❌ Unexpected error: {str(e)}\n\nPlease check your selections and try again."
+        return result, explanation
 
 
 with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as demo:
@@ -138,6 +161,10 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
             gr.Markdown("### Recommendations")
             output = gr.Markdown()
 
+            # Add explanation accordion
+            with gr.Accordion("❓ How did you choose these?", open=False):
+                explanation_output = gr.Markdown()
+
     gr.Examples(
         examples=[
             ["Garchomp", "Raging Bolt", "Great Tusk"],
@@ -147,7 +174,11 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
         inputs=[mon1, mon2, mon3],
     )
 
-    submit.click(fn=recommend_team, inputs=[mon1, mon2, mon3], outputs=output)
+    submit.click(
+        fn=recommend_team,
+        inputs=[mon1, mon2, mon3],
+        outputs=[output, explanation_output]
+    )
 
     # Add "Show Available Pokémon" section
     with gr.Accordion("📋 Show Available Pokémon", open=False):
