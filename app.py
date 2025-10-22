@@ -153,8 +153,8 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
 
     gr.Markdown(
         f"""
-        > **Note:** This app currently supports **{len(AVAILABLE_POKEMON)} Pokémon** from the Gen 9 OU tier.
-        > See the "Show Available Pokémon" section below for the full list.
+        > **Note:** This app currently supports **{len(AVAILABLE_POKEMON)} Pokémon** from the **Gen 9 OU** (OverUsed) tier - the standard competitive format with balanced, competitively viable Pokémon.
+        > See the "Show Available Pokémon" and FAQ sections below for more details.
         """
     )
 
@@ -369,13 +369,26 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
             ---
 
             ### What are Tiers?
-            Tiers organize Pokémon by power level for fair competitive play:
+            Tiers organize Pokémon by power level for fair competitive play. Smogon (the competitive Pokémon community) uses usage statistics and community votes to place Pokémon into tiers:
 
-            - **OU (OverUsed):** The standard competitive tier - balanced and diverse
-            - **Ubers:** Legendary and extremely powerful Pokémon
+            - **OU (OverUsed):** The standard competitive tier - balanced, diverse, and most popular
+              - Features ~100 competitively viable Pokémon
+              - Used in the majority of online battles
+              - Balanced meta game with multiple viable strategies
+
+            - **Ubers:** Legendary and extremely powerful Pokémon banned from OU
+              - Includes cover legendaries (Dialga, Palkia, etc.)
+              - Too powerful for standard play
+              - Separate competitive format
+
             - **UU (UnderUsed):** Viable Pokémon that are less dominant than OU
+              - Still strong, but overshadowed by OU options
+              - Healthy competitive tier in its own right
 
-            This app focuses on Gen 9 OU, which is the most popular competitive tier.
+            **Gen 9** refers to Pokémon Scarlet & Violet (Generation 9). This app focuses on **Gen 9 OU** because:
+            - Most popular competitive format (~70% of all battles)
+            - Best balance of diversity and competitiveness
+            - Most active community and resources
 
             ---
 
