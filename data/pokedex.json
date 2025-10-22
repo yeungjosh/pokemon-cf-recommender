@@ -1,0 +1,107 @@
+[
+  {
+    "name": "Garchomp",
+    "types": ["Dragon", "Ground"],
+    "baseStats": {"hp": 108, "atk": 130, "def": 95, "spa": 80, "spd": 85, "spe": 102},
+    "learnset": ["Stealth Rock", "Earthquake", "Dragon Claw", "Swords Dance", "Scale Shot"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/garchomp.png"
+  },
+  {
+    "name": "Raging Bolt",
+    "types": ["Electric", "Dragon"],
+    "baseStats": {"hp": 125, "atk": 73, "def": 91, "spa": 137, "spd": 89, "spe": 75},
+    "learnset": ["Thunderclap", "Draco Meteor", "Volt Switch", "Calm Mind", "Thunderbolt"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/raging-bolt.png"
+  },
+  {
+    "name": "Great Tusk",
+    "types": ["Ground", "Fighting"],
+    "baseStats": {"hp": 115, "atk": 131, "def": 131, "spa": 53, "spd": 53, "spe": 87},
+    "learnset": ["Rapid Spin", "Earthquake", "Close Combat", "Ice Spinner", "Knock Off"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/great-tusk.png"
+  },
+  {
+    "name": "Rillaboom",
+    "types": ["Grass"],
+    "baseStats": {"hp": 100, "atk": 125, "def": 90, "spa": 60, "spd": 70, "spe": 85},
+    "learnset": ["Grassy Glide", "U-turn", "Wood Hammer", "Knock Off", "High Horsepower"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/rillaboom.png"
+  },
+  {
+    "name": "Iron Valiant",
+    "types": ["Fairy", "Fighting"],
+    "baseStats": {"hp": 74, "atk": 130, "def": 90, "spa": 120, "spd": 60, "spe": 116},
+    "learnset": ["Close Combat", "Moonblast", "Knock Off", "Calm Mind", "Thunderbolt"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/iron-valiant.png"
+  },
+  {
+    "name": "Dragapult",
+    "types": ["Dragon", "Ghost"],
+    "baseStats": {"hp": 88, "atk": 120, "def": 75, "spa": 100, "spd": 75, "spe": 142},
+    "learnset": ["Dragon Darts", "U-turn", "Shadow Ball", "Will-O-Wisp", "Hex"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/dragapult.png"
+  },
+  {
+    "name": "Kingambit",
+    "types": ["Dark", "Steel"],
+    "baseStats": {"hp": 100, "atk": 135, "def": 120, "spa": 60, "spd": 85, "spe": 50},
+    "learnset": ["Sucker Punch", "Kowtow Cleave", "Iron Head", "Swords Dance", "Low Kick"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/kingambit.png"
+  },
+  {
+    "name": "Gholdengo",
+    "types": ["Steel", "Ghost"],
+    "baseStats": {"hp": 87, "atk": 60, "def": 95, "spa": 133, "spd": 91, "spe": 84},
+    "learnset": ["Make It Rain", "Shadow Ball", "Trick", "Nasty Plot", "Thunderbolt"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/gholdengo.png"
+  },
+  {
+    "name": "Gliscor",
+    "types": ["Ground", "Flying"],
+    "baseStats": {"hp": 75, "atk": 95, "def": 125, "spa": 45, "spd": 75, "spe": 95},
+    "learnset": ["Stealth Rock", "Earthquake", "U-turn", "Toxic", "Protect"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/gliscor.png"
+  },
+  {
+    "name": "Corviknight",
+    "types": ["Flying", "Steel"],
+    "baseStats": {"hp": 98, "atk": 87, "def": 105, "spa": 53, "spd": 85, "spe": 67},
+    "learnset": ["Defog", "Brave Bird", "U-turn", "Roost", "Iron Defense"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/corviknight.png"
+  },
+  {
+    "name": "Zamazenta",
+    "types": ["Fighting"],
+    "baseStats": {"hp": 92, "atk": 130, "def": 115, "spa": 80, "spd": 115, "spe": 138},
+    "learnset": ["Close Combat", "Iron Head", "Crunch", "Stone Edge", "Heavy Slam"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/zamazenta.png"
+  },
+  {
+    "name": "Landorus-Therian",
+    "types": ["Ground", "Flying"],
+    "baseStats": {"hp": 89, "atk": 145, "def": 90, "spa": 105, "spd": 80, "spe": 91},
+    "learnset": ["Stealth Rock", "Earthquake", "U-turn", "Knock Off", "Stone Edge"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/landorus-therian.png"
+  },
+  {
+    "name": "Ogerpon-Wellspring",
+    "types": ["Water", "Grass"],
+    "baseStats": {"hp": 80, "atk": 120, "def": 84, "spa": 60, "spd": 96, "spe": 110},
+    "learnset": ["Ivy Cudgel", "Horn Leech", "U-turn", "Knock Off", "Spiky Shield"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ogerpon-wellspring.png"
+  },
+  {
+    "name": "Kyurem",
+    "types": ["Dragon", "Ice"],
+    "baseStats": {"hp": 125, "atk": 130, "def": 90, "spa": 130, "spd": 90, "spe": 95},
+    "learnset": ["Draco Meteor", "Ice Beam", "Freeze-Dry", "Earth Power", "Icicle Spear"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/kyurem.png"
+  },
+  {
+    "name": "Samurott-Hisui",
+    "types": ["Water", "Dark"],
+    "baseStats": {"hp": 90, "atk": 108, "def": 80, "spa": 100, "spd": 65, "spe": 85},
+    "learnset": ["Ceaseless Edge", "Aqua Cutter", "Knock Off", "Sucker Punch", "Swords Dance"],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/samurott-hisuian.png"
+  }
+]
