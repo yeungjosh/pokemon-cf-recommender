@@ -69,7 +69,7 @@ def get_pokemon_sprite(mon_name: str) -> str:
     return ""
 
 
-def recommend_team(mon1: str, mon2: str, mon3: str) -> tuple[str, str]:
+def recommend_team(mon1: str, mon2: str, mon3: str, tier: str) -> tuple[str, str]:
     """Generate team recommendations using collaborative filtering."""
     if not all([mon1, mon2, mon3]):
         return "❌ Please select all 3 Pokémon.", ""
@@ -185,6 +185,12 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
             )
             mon3_sprite = gr.HTML()
 
+            tier = gr.Dropdown(
+                label="Tier",
+                choices=["Gen 9 OU", "Gen 9 Ubers", "Gen 9 UU"],
+                value="Gen 9 OU",
+            )
+
             submit = gr.Button("Get Recommendations", variant="primary")
 
         with gr.Column():
@@ -197,7 +203,7 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
 
     submit.click(
         fn=recommend_team,
-        inputs=[mon1, mon2, mon3],
+        inputs=[mon1, mon2, mon3, tier],
         outputs=[output, explanation_output]
     )
 
