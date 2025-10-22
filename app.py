@@ -55,6 +55,47 @@ with open("data/pokedex.json") as f:
 print("Model loaded successfully!")
 
 
+def get_pokemon_sprite(mon_name: str) -> str:
+    """Get HTML for displaying a Pokemon sprite."""
+    if not mon_name:
+        return ""
+
+    # Find pokemon in data
+    for p in pokemon_data:
+        if p["name"] == mon_name:
+            sprite_url = p.get("sprite")
+            if sprite_url:
+                return f'<div style="text-align: center; margin: 10px 0;"><img src="{sprite_url}" width="96" height="96" alt="{mon_name}"></div>'
+    return ""
+
+
+def get_full_team_display(mon1: str, mon2: str, mon3: str) -> str:
+    """Generate HTML display for the complete team."""
+    if not all([mon1, mon2, mon3]):
+        return ""
+
+    team_html = '<div style="text-align: center; margin: 20px 0;">'
+    team_html += '<h3 style="margin-bottom: 15px;">Your Complete Team</h3>'
+    team_html += '<div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">'
+
+    for mon_name in [mon1, mon2, mon3]:
+        # Find pokemon in data
+        for p in pokemon_data:
+            if p["name"] == mon_name:
+                sprite_url = p.get("sprite")
+                if sprite_url:
+                    team_html += f'''
+                    <div style="text-align: center;">
+                        <img src="{sprite_url}" width="96" height="96" alt="{mon_name}">
+                        <p style="margin-top: 5px; font-weight: bold;">{mon_name}</p>
+                    </div>
+                    '''
+                break
+
+    team_html += '</div></div>'
+    return team_html
+
+
 def recommend_team(mon1: str, mon2: str, mon3: str) -> tuple[str, str]:
     """Generate team recommendations using collaborative filtering."""
     if not all([mon1, mon2, mon3]):
@@ -142,18 +183,23 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
                 value="Garchomp",
                 allow_custom_value=True,
             )
+            mon1_sprite = gr.HTML()
+
             mon2 = gr.Dropdown(
                 label="Pokémon 2",
                 choices=AVAILABLE_POKEMON,
                 value="Raging Bolt",
                 allow_custom_value=True,
             )
+            mon2_sprite = gr.HTML()
+
             mon3 = gr.Dropdown(
                 label="Pokémon 3",
                 choices=AVAILABLE_POKEMON,
                 value="Great Tusk",
                 allow_custom_value=True,
             )
+            mon3_sprite = gr.HTML()
 
             submit = gr.Button("Get Recommendations", variant="primary")
 
@@ -180,6 +226,11 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
         outputs=[output, explanation_output]
     )
 
+    # Wire up sprite updates when Pokemon selections change
+    mon1.change(fn=get_pokemon_sprite, inputs=[mon1], outputs=[mon1_sprite])
+    mon2.change(fn=get_pokemon_sprite, inputs=[mon2], outputs=[mon2_sprite])
+    mon3.change(fn=get_pokemon_sprite, inputs=[mon3], outputs=[mon3_sprite])
+
     # Add "Show Available Pokémon" section
     with gr.Accordion("📋 Show Available Pokémon", open=False):
         available_list = "\n".join([f"- {mon}" for mon in AVAILABLE_POKEMON])
@@ -192,6 +243,29 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
             *Note: Only these Pokémon are available for team building and recommendations.*
             """
         )
+
+    # Display complete team at bottom
+    gr.Markdown("---")
+    team_display = gr.HTML()
+
+    # Update team display when any Pokemon selection changes
+    for dropdown in [mon1, mon2, mon3]:
+        dropdown.change(
+            fn=get_full_team_display,
+            inputs=[mon1, mon2, mon3],
+            outputs=[team_display],
+        )
+
+    # Load initial sprites and team display on page load
+    demo.load(
+        fn=lambda: (
+            get_pokemon_sprite("Garchomp"),
+            get_pokemon_sprite("Raging Bolt"),
+            get_pokemon_sprite("Great Tusk"),
+            get_full_team_display("Garchomp", "Raging Bolt", "Great Tusk"),
+        ),
+        outputs=[mon1_sprite, mon2_sprite, mon3_sprite, team_display],
+    )
 
     gr.Markdown(
         """

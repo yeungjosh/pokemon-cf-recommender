@@ -21,7 +21,8 @@
       "Knock Off",
       "Stealth Rock",
       "Stone Edge"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/great-tusk.png"
   },
   {
     "name": "Kingambit",
@@ -44,7 +45,8 @@
       "Swords Dance",
       "Low Kick",
       "Zen Headbutt"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/kingambit.png"
   },
   {
     "name": "Gholdengo",
@@ -67,7 +69,8 @@
       "Nasty Plot",
       "Thunderbolt",
       "Focus Blast"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/gholdengo.png"
   },
   {
     "name": "Dragapult",
@@ -90,7 +93,8 @@
       "Will-O-Wisp",
       "Hex",
       "Draco Meteor"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/dragapult.png"
   },
   {
     "name": "Dragonite",
@@ -113,7 +117,8 @@
       "Earthquake",
       "Ice Beam",
       "Fire Punch"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/dragonite.png"
   },
   {
     "name": "Ogerpon-Wellspring",
@@ -136,7 +141,8 @@
       "Knock Off",
       "Spiky Shield",
       "Play Rough"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ogerpon-wellspring.png"
   },
   {
     "name": "Hatterene",
@@ -159,7 +165,8 @@
       "Healing Wish",
       "Mystical Fire",
       "Calm Mind"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/hatterene.png"
   },
   {
     "name": "Iron Valiant",
@@ -182,7 +189,8 @@
       "Calm Mind",
       "Thunderbolt",
       "Psyshock"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/iron-valiant.png"
   },
   {
     "name": "Slowking-Galar",
@@ -205,7 +213,8 @@
       "Trick Room",
       "Flamethrower",
       "Thunder Wave"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/slowking-galar.png"
   },
   {
     "name": "Corviknight",
@@ -228,7 +237,8 @@
       "Roost",
       "Iron Defense",
       "Bulk Up"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/corviknight.png"
   },
   {
     "name": "Zamazenta",
@@ -250,7 +260,8 @@
       "Stone Edge",
       "Heavy Slam",
       "Play Rough"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/zamazenta.png"
   },
   {
     "name": "Landorus-Therian",
@@ -273,7 +284,8 @@
       "Knock Off",
       "Stone Edge",
       "Fly"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/landorus-therian.png"
   },
   {
     "name": "Gliscor",
@@ -296,7 +308,8 @@
       "Toxic",
       "Protect",
       "Knock Off"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/gliscor.png"
   },
   {
     "name": "Raging Bolt",
@@ -319,7 +332,8 @@
       "Calm Mind",
       "Thunderbolt",
       "Dragon Pulse"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/raging-bolt.png"
   },
   {
     "name": "Cinderace",
@@ -341,7 +355,8 @@
       "Sucker Punch",
       "Gunk Shot",
       "Court Change"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/cinderace.png"
   },
   {
     "name": "Samurott-Hisui",
@@ -364,7 +379,8 @@
       "Sucker Punch",
       "Swords Dance",
       "Sacred Sword"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/samurott-hisuian.png"
   },
   {
     "name": "Ting-Lu",
@@ -387,7 +403,8 @@
       "Whirlwind",
       "Spikes",
       "Heavy Slam"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ting-lu.png"
   },
   {
     "name": "Glimmora",
@@ -410,7 +427,8 @@
       "Earth Power",
       "Spikes",
       "Mortal Spin"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/glimmora.png"
   },
   {
     "name": "Iron Treads",
@@ -433,7 +451,8 @@
       "Stealth Rock",
       "Volt Switch",
       "Ice Spinner"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/iron-treads.png"
   },
   {
     "name": "Scizor",
@@ -456,7 +475,8 @@
       "Knock Off",
       "Swords Dance",
       "Defog"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/scizor.png"
   },
   {
     "name": "Ceruledge",
@@ -479,7 +499,8 @@
       "Shadow Sneak",
       "Swords Dance",
       "Bulk Up"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ceruledge.png"
   },
   {
     "name": "Alomomola",
@@ -501,7 +522,8 @@
       "Protect",
       "Mirror Coat",
       "Play Rough"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/alomomola.png"
   },
   {
     "name": "Iron Moth",
@@ -524,7 +546,8 @@
       "Energy Ball",
       "Morning Sun",
       "Agility"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/iron-moth.png"
   },
   {
     "name": "Kyurem",
@@ -547,7 +570,8 @@
       "Earth Power",
       "Icicle Spear",
       "Dragon Dance"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/kyurem.png"
   },
   {
     "name": "Darkrai",
@@ -569,7 +593,8 @@
       "Focus Blast",
       "Nasty Plot",
       "Hypnosis"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/darkrai.png"
   },
   {
     "name": "Pecharunt",
@@ -592,7 +617,8 @@
       "Parting Shot",
       "Hex",
       "Foul Play"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/pecharunt.png"
   },
   {
     "name": "Zapdos",
@@ -615,7 +641,8 @@
       "Volt Switch",
       "Roost",
       "U-turn"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/zapdos.png"
   },
   {
     "name": "Garganacl",
@@ -637,7 +664,8 @@
       "Earthquake",
       "Stone Edge",
       "Body Press"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/garganacl.png"
   },
   {
     "name": "Walking Wake",
@@ -660,7 +688,8 @@
       "Dragon Pulse",
       "Flip Turn",
       "Substitute"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/walking-wake.png"
   },
   {
     "name": "Moltres",
@@ -683,7 +712,8 @@
       "Roost",
       "Will-O-Wisp",
       "Scorching Sands"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/moltres.png"
   },
   {
     "name": "Primarina",
@@ -706,7 +736,8 @@
       "Psychic Noise",
       "Calm Mind",
       "Ice Beam"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/primarina.png"
   },
   {
     "name": "Garchomp",
@@ -729,7 +760,8 @@
       "Swords Dance",
       "Scale Shot",
       "Fire Fang"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/garchomp.png"
   },
   {
     "name": "Rillaboom",
@@ -751,7 +783,8 @@
       "Knock Off",
       "High Horsepower",
       "Drain Punch"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/rillaboom.png"
   },
   {
     "name": "Meowscarada",
@@ -774,7 +807,8 @@
       "Play Rough",
       "Sucker Punch",
       "Triple Axel"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/meowscarada.png"
   },
   {
     "name": "Iron Crown",
@@ -797,7 +831,8 @@
       "Focus Blast",
       "Calm Mind",
       "Expanding Force"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/iron-crown.png"
   },
   {
     "name": "Araquanid",
@@ -820,7 +855,8 @@
       "Sucker Punch",
       "Mirror Coat",
       "Toxic"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/araquanid.png"
   },
   {
     "name": "Enamorus",
@@ -843,7 +879,8 @@
       "Calm Mind",
       "Superpower",
       "Taunt"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/enamorus.png"
   },
   {
     "name": "Clefable",
@@ -865,7 +902,8 @@
       "Thunder Wave",
       "Calm Mind",
       "Soft-Boiled"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/clefable.png"
   },
   {
     "name": "Weezing-Galar",
@@ -888,7 +926,8 @@
       "Will-O-Wisp",
       "Pain Split",
       "Taunt"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/weezing-galar.png"
   },
   {
     "name": "Pelipper",
@@ -911,7 +950,8 @@
       "Roost",
       "Defog",
       "Weather Ball"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/pelipper.png"
   },
   {
     "name": "Heatran",
@@ -934,7 +974,8 @@
       "Stealth Rock",
       "Taunt",
       "Will-O-Wisp"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/heatran.png"
   },
   {
     "name": "Torkoal",
@@ -956,7 +997,8 @@
       "Yawn",
       "Body Press",
       "Solar Beam"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/torkoal.png"
   },
   {
     "name": "Weavile",
@@ -979,7 +1021,8 @@
       "Low Kick",
       "Swords Dance",
       "Ice Spinner"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/weavile.png"
   },
   {
     "name": "Deoxys-Speed",
@@ -1001,7 +1044,8 @@
       "Knock Off",
       "Psycho Boost",
       "Ice Beam"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/deoxys-speed.png"
   },
   {
     "name": "Tyranitar",
@@ -1024,7 +1068,8 @@
       "Ice Punch",
       "Dragon Dance",
       "Crunch"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/tyranitar.png"
   },
   {
     "name": "Blaziken",
@@ -1047,7 +1092,8 @@
       "Swords Dance",
       "Protect",
       "Stone Edge"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/blaziken.png"
   },
   {
     "name": "Toxapex",
@@ -1070,7 +1116,8 @@
       "Haze",
       "Toxic Spikes",
       "Knock Off"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/toxapex.png"
   },
   {
     "name": "Dondozo",
@@ -1092,7 +1139,8 @@
       "Body Press",
       "Curse",
       "Rest"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/dondozo.png"
   },
   {
     "name": "Ninetales-Alola",
@@ -1115,7 +1163,8 @@
       "Freeze-Dry",
       "Encore",
       "Hail"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ninetales-alola.png"
   },
   {
     "name": "Ursaluna",
@@ -1138,7 +1187,8 @@
       "Swords Dance",
       "Bulk Up",
       "Drain Punch"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ursaluna.png"
   },
   {
     "name": "Clodsire",
@@ -1161,7 +1211,8 @@
       "Spikes",
       "Stealth Rock",
       "Knock Off"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/clodsire.png"
   },
   {
     "name": "Serperior",
@@ -1183,7 +1234,8 @@
       "Substitute",
       "Leech Seed",
       "Dragon Pulse"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/serperior.png"
   },
   {
     "name": "Hydrapple",
@@ -1206,7 +1258,8 @@
       "Dragon Tail",
       "Recover",
       "Nasty Plot"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/hydrapple.png"
   },
   {
     "name": "Greninja",
@@ -1229,7 +1282,8 @@
       "U-turn",
       "Spikes",
       "Toxic Spikes"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/greninja.png"
   },
   {
     "name": "Hoopa-Unbound",
@@ -1252,7 +1306,8 @@
       "Psychic",
       "Gunk Shot",
       "Zen Headbutt"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/hoopa-unbound.png"
   },
   {
     "name": "Excadrill",
@@ -1275,7 +1330,8 @@
       "Swords Dance",
       "Rock Slide",
       "Stealth Rock"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/excadrill.png"
   },
   {
     "name": "Lokix",
@@ -1298,7 +1354,8 @@
       "Sucker Punch",
       "Axe Kick",
       "Throat Chop"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/lokix.png"
   },
   {
     "name": "Latios",
@@ -1321,7 +1378,8 @@
       "Flip Turn",
       "Calm Mind",
       "Surf"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/latios.png"
   },
   {
     "name": "Tornadus-Therian",
@@ -1343,7 +1401,8 @@
       "Heat Wave",
       "Taunt",
       "Defog"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/tornadus-therian.png"
   },
   {
     "name": "Skeledirge",
@@ -1366,7 +1425,8 @@
       "Will-O-Wisp",
       "Hex",
       "Earth Power"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/skeledirge.png"
   },
   {
     "name": "Ninetales",
@@ -1388,7 +1448,8 @@
       "Will-O-Wisp",
       "Healing Wish",
       "Encore"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ninetales.png"
   },
   {
     "name": "Blissey",
@@ -1410,7 +1471,8 @@
       "Thunder Wave",
       "Teleport",
       "Heal Bell"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/blissey.png"
   },
   {
     "name": "Rotom-Wash",
@@ -1433,7 +1495,8 @@
       "Thunder Wave",
       "Discharge",
       "Pain Split"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/rotom-wash.png"
   },
   {
     "name": "Quaquaval",
@@ -1456,7 +1519,8 @@
       "Knock Off",
       "Swords Dance",
       "Rapid Spin"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/quaquaval.png"
   },
   {
     "name": "Venusaur",
@@ -1479,7 +1543,8 @@
       "Sleep Powder",
       "Knock Off",
       "Earth Power"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/venusaur.png"
   },
   {
     "name": "Sinistcha",
@@ -1502,7 +1567,8 @@
       "Strength Sap",
       "Stun Spore",
       "Leaf Storm"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/sinistcha.png"
   },
   {
     "name": "Iron Hands",
@@ -1525,7 +1591,8 @@
       "Fake Out",
       "Volt Switch",
       "Earthquake"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/iron-hands.png"
   },
   {
     "name": "Ribombee",
@@ -1548,7 +1615,8 @@
       "U-turn",
       "Stun Spore",
       "Psychic"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ribombee.png"
   },
   {
     "name": "Tinkaton",
@@ -1571,7 +1639,8 @@
       "Thunder Wave",
       "Play Rough",
       "Ice Hammer"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/tinkaton.png"
   },
   {
     "name": "Barraskewda",
@@ -1593,7 +1662,8 @@
       "Crunch",
       "Psychic Fangs",
       "Aqua Jet"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/barraskewda.png"
   },
   {
     "name": "Grimmsnarl",
@@ -1616,7 +1686,8 @@
       "Light Screen",
       "Taunt",
       "Parting Shot"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/grimmsnarl.png"
   },
   {
     "name": "Mimikyu",
@@ -1639,7 +1710,8 @@
       "Swords Dance",
       "Trick Room",
       "Will-O-Wisp"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/mimikyu.png"
   },
   {
     "name": "Ogerpon-Cornerstone",
@@ -1662,7 +1734,8 @@
       "U-turn",
       "Spiky Shield",
       "Wood Hammer"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ogerpon-cornerstone.png"
   },
   {
     "name": "Gengar",
@@ -1685,7 +1758,8 @@
       "Will-O-Wisp",
       "Thunderbolt",
       "Nasty Plot"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/gengar.png"
   },
   {
     "name": "Hawlucha",
@@ -1708,7 +1782,8 @@
       "Stone Edge",
       "Swords Dance",
       "U-turn"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/hawlucha.png"
   },
   {
     "name": "Goodra-Hisui",
@@ -1731,7 +1806,8 @@
       "Thunderbolt",
       "Body Press",
       "Acid Spray"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/goodra-hisui.png"
   },
   {
     "name": "Arcanine-Hisui",
@@ -1754,7 +1830,8 @@
       "Close Combat",
       "Stealth Rock",
       "Will-O-Wisp"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/arcanine-hisui.png"
   },
   {
     "name": "Ogerpon",
@@ -1776,7 +1853,8 @@
       "U-turn",
       "Spiky Shield",
       "Wood Hammer"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/ogerpon.png"
   },
   {
     "name": "Indeedee",
@@ -1799,7 +1877,8 @@
       "Healing Wish",
       "Calm Mind",
       "Dazzling Gleam"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/indeedee.png"
   },
   {
     "name": "Comfey",
@@ -1821,7 +1900,8 @@
       "Taunt",
       "Floral Healing",
       "U-turn"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/comfey.png"
   },
   {
     "name": "Metagross",
@@ -1844,7 +1924,8 @@
       "Ice Punch",
       "Stealth Rock",
       "Bullet Punch"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/metagross.png"
   },
   {
     "name": "Volcanion",
@@ -1867,7 +1948,8 @@
       "Sludge Bomb",
       "Will-O-Wisp",
       "Taunt"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/volcanion.png"
   },
   {
     "name": "Incineroar",
@@ -1890,7 +1972,8 @@
       "Will-O-Wisp",
       "Fake Out",
       "U-turn"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/incineroar.png"
   },
   {
     "name": "Keldeo",
@@ -1913,7 +1996,8 @@
       "Calm Mind",
       "Icy Wind",
       "Vacuum Wave"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/keldeo.png"
   },
   {
     "name": "Skarmory",
@@ -1936,7 +2020,8 @@
       "Roost",
       "Whirlwind",
       "Iron Defense"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/skarmory.png"
   },
   {
     "name": "Zoroark-Hisui",
@@ -1959,7 +2044,8 @@
       "Trick",
       "Knock Off",
       "Flamethrower"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/zoroark-hisui.png"
   },
   {
     "name": "Slither Wing",
@@ -1982,7 +2068,8 @@
       "Earthquake",
       "Wild Charge",
       "Bulk Up"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/slither-wing.png"
   },
   {
     "name": "Maushold",
@@ -2004,7 +2091,8 @@
       "Tidy Up",
       "U-turn",
       "Protect"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/maushold.png"
   },
   {
     "name": "Hydreigon",
@@ -2027,7 +2115,8 @@
       "Flash Cannon",
       "U-turn",
       "Stealth Rock"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/hydreigon.png"
   },
   {
     "name": "Thundurus-Therian",
@@ -2050,7 +2139,8 @@
       "Agility",
       "Nasty Plot",
       "Knock Off"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/thundurus-therian.png"
   },
   {
     "name": "Polteageist",
@@ -2072,7 +2162,8 @@
       "Strength Sap",
       "Giga Drain",
       "Calm Mind"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/polteageist.png"
   },
   {
     "name": "Charizard",
@@ -2095,7 +2186,8 @@
       "Roost",
       "Dragon Pulse",
       "Solar Beam"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/charizard.png"
   },
   {
     "name": "Latias",
@@ -2118,7 +2210,8 @@
       "Recover",
       "Thunderbolt",
       "Ice Beam"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/latias.png"
   },
   {
     "name": "Azumarill",
@@ -2141,7 +2234,8 @@
       "Knock Off",
       "Belly Drum",
       "Ice Punch"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/azumarill.png"
   },
   {
     "name": "Iron Boulder",
@@ -2164,7 +2258,8 @@
       "Earthquake",
       "Swords Dance",
       "Stealth Rock"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/iron-boulder.png"
   },
   {
     "name": "Cloyster",
@@ -2187,7 +2282,8 @@
       "Ice Shard",
       "Liquidation",
       "Spikes"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/cloyster.png"
   },
   {
     "name": "Gyarados",
@@ -2210,7 +2306,8 @@
       "Ice Fang",
       "Crunch",
       "Power Whip"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/gyarados.png"
   },
   {
     "name": "Umbreon",
@@ -2232,7 +2329,8 @@
       "Toxic",
       "Heal Bell",
       "Yawn"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/umbreon.png"
   },
   {
     "name": "Galvantula",
@@ -2255,7 +2353,8 @@
       "Volt Switch",
       "Giga Drain",
       "Energy Ball"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/galvantula.png"
   },
   {
     "name": "Kommo-o",
@@ -2278,6 +2377,7 @@
       "Stealth Rock",
       "Iron Head",
       "Earthquake"
-    ]
+    ],
+    "sprite": "https://img.pokemondb.net/sprites/home/normal/kommo-o.png"
   }
 ]
