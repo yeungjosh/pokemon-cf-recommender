@@ -69,33 +69,6 @@ def get_pokemon_sprite(mon_name: str) -> str:
     return ""
 
 
-def get_full_team_display(mon1: str, mon2: str, mon3: str) -> str:
-    """Generate HTML display for the complete team."""
-    if not all([mon1, mon2, mon3]):
-        return ""
-
-    team_html = '<div style="text-align: center; margin: 20px 0;">'
-    team_html += '<h3 style="margin-bottom: 15px;">Your Complete Team</h3>'
-    team_html += '<div style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap;">'
-
-    for mon_name in [mon1, mon2, mon3]:
-        # Find pokemon in data
-        for p in pokemon_data:
-            if p["name"] == mon_name:
-                sprite_url = p.get("sprite")
-                if sprite_url:
-                    team_html += f'''
-                    <div style="text-align: center;">
-                        <img src="{sprite_url}" width="96" height="96" alt="{mon_name}">
-                        <p style="margin-top: 5px; font-weight: bold;">{mon_name}</p>
-                    </div>
-                    '''
-                break
-
-    team_html += '</div></div>'
-    return team_html
-
-
 def recommend_team(mon1: str, mon2: str, mon3: str) -> tuple[str, str]:
     """Generate team recommendations using collaborative filtering."""
     if not all([mon1, mon2, mon3]):
@@ -147,9 +120,13 @@ def recommend_team(mon1: str, mon2: str, mon3: str) -> tuple[str, str]:
             # Add sprites for the trio
             sprite_row = ""
             for mon_name in rec.trio:
-                sprite_url = recommender.get_sprite(mon_name)
-                if sprite_url:
-                    sprite_row += f'<img src="{sprite_url}" width="96" height="96" style="display:inline-block; vertical-align:middle;" alt="{mon_name}"> '
+                # Find sprite in pokemon_data
+                for p in pokemon_data:
+                    if p["name"] == mon_name:
+                        sprite_url = p.get("sprite")
+                        if sprite_url:
+                            sprite_row += f'<img src="{sprite_url}" width="96" height="96" style="display:inline-block; vertical-align:middle;" alt="{mon_name}"> '
+                        break
 
             if sprite_row:
                 result += f'{sprite_row}\n\n'
@@ -211,15 +188,6 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
             with gr.Accordion("❓ How did you choose these?", open=False):
                 explanation_output = gr.Markdown()
 
-    gr.Examples(
-        examples=[
-            ["Garchomp", "Raging Bolt", "Great Tusk"],
-            ["Dragapult", "Kingambit", "Gholdengo"],
-            ["Landorus-Therian", "Corviknight", "Rillaboom"],
-        ],
-        inputs=[mon1, mon2, mon3],
-    )
-
     submit.click(
         fn=recommend_team,
         inputs=[mon1, mon2, mon3],
@@ -230,6 +198,56 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
     mon1.change(fn=get_pokemon_sprite, inputs=[mon1], outputs=[mon1_sprite])
     mon2.change(fn=get_pokemon_sprite, inputs=[mon2], outputs=[mon2_sprite])
     mon3.change(fn=get_pokemon_sprite, inputs=[mon3], outputs=[mon3_sprite])
+
+    # Load initial sprites on page load
+    demo.load(
+        fn=lambda: (
+            get_pokemon_sprite("Garchomp"),
+            get_pokemon_sprite("Raging Bolt"),
+            get_pokemon_sprite("Great Tusk"),
+        ),
+        outputs=[mon1_sprite, mon2_sprite, mon3_sprite],
+    )
+
+    # Example Teams Section
+    with gr.Accordion("💡 Example Strong Teams", open=False):
+        gr.Markdown(
+            """
+            ### Hyper Offense Core
+            <div style="display: flex; align-items: center; gap: 15px; margin: 15px 0;">
+                <img src="https://img.pokemondb.net/sprites/home/normal/dragapult.png" width="80" height="80" alt="Dragapult">
+                <img src="https://img.pokemondb.net/sprites/home/normal/iron-valiant.png" width="80" height="80" alt="Iron Valiant">
+                <img src="https://img.pokemondb.net/sprites/home/normal/great-tusk.png" width="80" height="80" alt="Great Tusk">
+            </div>
+            **Dragapult + Iron Valiant + Great Tusk**
+
+            Fast, offensive core with momentum control. Dragapult forces switches with U-turn, Iron Valiant provides mixed offensive pressure, and Great Tusk sets hazards while handling Steel-types. This trio frequently appears together in hyper offensive teams.
+
+            ---
+
+            ### Balance Core
+            <div style="display: flex; align-items: center; gap: 15px; margin: 15px 0;">
+                <img src="https://img.pokemondb.net/sprites/home/normal/landorus-therian.png" width="80" height="80" alt="Landorus-Therian">
+                <img src="https://img.pokemondb.net/sprites/home/normal/corviknight.png" width="80" height="80" alt="Corviknight">
+                <img src="https://img.pokemondb.net/sprites/home/normal/toxapex.png" width="80" height="80" alt="Toxapex">
+            </div>
+            **Landorus-Therian + Corviknight + Toxapex**
+
+            Defensive backbone with hazard control. Landorus-T sets Stealth Rock and threatens offense, Corviknight provides physical wall + Defog support, and Toxapex walls special attackers. Classic balanced team structure that handles most threats.
+
+            ---
+
+            ### Offensive Pivot Core
+            <div style="display: flex; align-items: center; gap: 15px; margin: 15px 0;">
+                <img src="https://img.pokemondb.net/sprites/home/normal/garchomp.png" width="80" height="80" alt="Garchomp">
+                <img src="https://img.pokemondb.net/sprites/home/normal/raging-bolt.png" width="80" height="80" alt="Raging Bolt">
+                <img src="https://img.pokemondb.net/sprites/home/normal/kingambit.png" width="80" height="80" alt="Kingambit">
+            </div>
+            **Garchomp + Raging Bolt + Kingambit**
+
+            Strong offensive synergy with good defensive typing. Garchomp provides speed and Ground coverage, Raging Bolt handles Water-types and pivots with Volt Switch, and Kingambit punishes opposing offense with Sucker Punch. These three cover each other's weaknesses well.
+            """
+        )
 
     # Add "Show Available Pokémon" section
     with gr.Accordion("📋 Show Available Pokémon", open=False):
@@ -243,29 +261,6 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
             *Note: Only these Pokémon are available for team building and recommendations.*
             """
         )
-
-    # Display complete team at bottom
-    gr.Markdown("---")
-    team_display = gr.HTML()
-
-    # Update team display when any Pokemon selection changes
-    for dropdown in [mon1, mon2, mon3]:
-        dropdown.change(
-            fn=get_full_team_display,
-            inputs=[mon1, mon2, mon3],
-            outputs=[team_display],
-        )
-
-    # Load initial sprites and team display on page load
-    demo.load(
-        fn=lambda: (
-            get_pokemon_sprite("Garchomp"),
-            get_pokemon_sprite("Raging Bolt"),
-            get_pokemon_sprite("Great Tusk"),
-            get_full_team_display("Garchomp", "Raging Bolt", "Great Tusk"),
-        ),
-        outputs=[mon1_sprite, mon2_sprite, mon3_sprite, team_display],
-    )
 
     gr.Markdown(
         """
