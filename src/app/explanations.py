@@ -5,21 +5,14 @@ Provides layman-friendly explanations for why specific Pokémon trios
 were recommended based on co-occurrence patterns.
 """
 
-from dataclasses import dataclass
+# Thresholds for team cohesion interpretation
+TEAM_COHESION_HIGH = 0.5
+TEAM_COHESION_MEDIUM = 0.3
+CO_OCCURRENCE_THRESHOLD = 0.3  # Minimum similarity to mention
 
-
-@dataclass
-class CFExplanationData:
-    """Explanation data for CF recommendations."""
-
-    pokemon_names: list[str]
-    composite_score: float
-    cf_score: float
-    team_cohesion: float
-
-    # Co-occurrence context
-    frequently_paired: list[tuple[str, str]]  # Pairs that appear together often
-    team_archetype: str  # e.g., "Balance", "Hyper Offense"
+# Thresholds for recommendation strength tiers
+RECOMMENDATION_STRENGTH_HIGH = 0.7
+RECOMMENDATION_STRENGTH_MEDIUM = 0.5
 
 
 def generate_cf_explanation(
@@ -55,7 +48,7 @@ def generate_cf_explanation(
                 idx1 = cf_model.pokemon_to_idx[user_mon]
                 idx2 = cf_model.pokemon_to_idx[rec_mon]
                 sim = cf_model.similarity_matrix[idx1][idx2]
-                if sim > 0.3:  # Threshold for "frequently appear together"
+                if sim > CO_OCCURRENCE_THRESHOLD:
                     high_similarity_pairs.append((user_mon, rec_mon, sim))
 
     # Sort by similarity
@@ -72,9 +65,9 @@ def generate_cf_explanation(
 
     # Explain team cohesion
     explanation += "### ⚔️ Team Synergy\n\n"
-    if team_cohesion > 0.5:
+    if team_cohesion > TEAM_COHESION_HIGH:
         explanation += "This combination creates a **highly cohesive team** - these 6 Pokémon work well together based on historical patterns.\n"
-    elif team_cohesion > 0.3:
+    elif team_cohesion > TEAM_COHESION_MEDIUM:
         explanation += "This combination creates a **well-balanced team** with good synergy.\n"
     else:
         explanation += "This combination provides **diverse coverage** with complementary roles.\n"
@@ -85,9 +78,9 @@ def generate_cf_explanation(
     explanation += "### 💡 Recommendation Strength\n\n"
     composite_score = 0.7 * cf_score + 0.3 * team_cohesion
 
-    if composite_score > 0.7:
+    if composite_score > RECOMMENDATION_STRENGTH_HIGH:
         explanation += "⭐⭐⭐ **Highly Recommended** - This trio has proven patterns on competitive teams.\n"
-    elif composite_score > 0.5:
+    elif composite_score > RECOMMENDATION_STRENGTH_MEDIUM:
         explanation += "⭐⭐ **Recommended** - This trio shows strong co-occurrence patterns.\n"
     else:
         explanation += "⭐ **Viable** - This trio is worth considering based on team data.\n"

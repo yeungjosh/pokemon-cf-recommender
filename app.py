@@ -5,6 +5,7 @@ Uses team co-occurrence patterns to recommend Pokémon combinations.
 """
 
 import json
+import logging
 from pathlib import Path
 
 import gradio as gr
@@ -12,6 +13,9 @@ import gradio as gr
 from src.app.explanations import generate_cf_explanation
 from src.cf_model import CollaborativeFilteringModel
 from src.recommender import CFTeamRecommender
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
 
 # Initialize model
 print("Loading collaborative filtering model...")
@@ -58,9 +62,28 @@ def recommend_team(mon1: str, mon2: str, mon3: str) -> tuple[str, str]:
 
     input_team = [mon1.strip(), mon2.strip(), mon3.strip()]
 
+    # Validate Pokemon names against available list
+    unknown = [m for m in input_team if m not in AVAILABLE_POKEMON]
+    if unknown:
+        suggestion = "❌ Unknown Pokémon: " + ", ".join(unknown) + "\n\n"
+        suggestion += "**Try these instead:**\n"
+        suggestion += ", ".join(AVAILABLE_POKEMON[:8]) + ", ..."
+        suggestion += f"\n\n*({len(AVAILABLE_POKEMON)} total)*"
+        return suggestion, ""
+
     try:
         recommendations = recommender.recommend(input_team, top_k=5, candidate_pool_size=12)
-
+    except ValueError as e:
+        error_msg = str(e)
+        suggestion = f"❌ {error_msg}\n\n"
+        suggestion += "**Available Pokémon in Gen 9 OU:**\n"
+        suggestion += ", ".join(AVAILABLE_POKEMON[:8]) + ", ..."
+        suggestion += f"\n\n*({len(AVAILABLE_POKEMON)} total)*"
+        return suggestion, ""
+    except Exception:
+        logging.exception("Unexpected error in recommend_team")
+        return "❌ Unexpected error.\n\nPlease check your selections and try again.", ""
+    else:
         if not recommendations:
             return "No recommendations found. Try different Pokémon!", ""
 
@@ -97,17 +120,6 @@ def recommend_team(mon1: str, mon2: str, mon3: str) -> tuple[str, str]:
             result += "---\n\n"
 
         return result, explanation
-
-    except ValueError as e:
-        error_msg = str(e)
-        suggestion = f"❌ {error_msg}\n\n"
-        suggestion += "**Available Pokémon in Gen 9 OU:**\n"
-        suggestion += ", ".join(AVAILABLE_POKEMON[:8]) + ", ..."
-        suggestion += f"\n\n*({len(AVAILABLE_POKEMON)} total)*"
-        return suggestion, ""
-
-    except Exception as e:
-        return f"❌ Unexpected error: {str(e)}\n\nPlease check your selections and try again.", ""
 
 
 with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as demo:
