@@ -94,8 +94,8 @@ pokemon-cf-recommender/
 
 ## 🎯 Deployed At
 
-- **Hugging Face**: TBD
-- **GitHub**: TBD
+- **Hugging Face**: https://huggingface.co/spaces/joshuajoshy/pokemon-cf-recommender
+- **GitHub**: https://github.com/yeungjosh/pokemon-cf-recommender
 
 ---
 
