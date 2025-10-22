@@ -197,9 +197,9 @@ with gr.Blocks(title="Pokémon Team Recommender - Collaborative Filtering") as d
             gr.Markdown("### Recommendations")
             output = gr.Markdown()
 
-            # Add explanation accordion
-            with gr.Accordion("❓ How did you choose these?", open=False):
-                explanation_output = gr.Markdown()
+    # Add explanation accordion below recommendations
+    with gr.Accordion("❓ How did you choose these?", open=False):
+        explanation_output = gr.Markdown()
 
     submit.click(
         fn=recommend_team,
