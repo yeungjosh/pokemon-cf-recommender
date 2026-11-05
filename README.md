@@ -60,20 +60,32 @@ pip install -r requirements.txt
 python app.py
 ```
 
+On first launch `app.py` has no saved model, so it generates 1,500 synthetic teams
+from `data/pokedex.json`, writes them to `data/teams.json`, trains the
+collaborative filtering model and saves it to `models/cf_model.json`. Later launches
+load the saved model. Delete `models/cf_model.json` to retrain. Both generated files
+are git-ignored.
+
+You can also regenerate just the team data with `python -m src.data_generator`.
+
 ## 📁 Project Structure
 
 ```
 pokemon-cf-recommender/
-├── app.py                 # Gradio UI
+├── app.py                 # Gradio UI (trains the model on first run)
+├── HOW_CF_WORKS.md        # Walkthrough of the CF approach
 ├── data/
-│   ├── teams.json        # Real/synthetic team data
-│   └── pokedex.json      # Pokémon metadata
+│   ├── pokedex.json      # Pokémon metadata (100 Pokémon, with sprites)
+│   └── teams.json        # Generated on first run (git-ignored)
+├── scripts/
+│   └── add_sprites.py    # Adds sprite URLs to pokedex.json
 ├── src/
+│   ├── app/explanations.py # Text explanations shown in the UI
 │   ├── data_generator.py # Generate synthetic team data
 │   ├── cf_model.py       # Collaborative filtering implementation
 │   └── recommender.py    # Recommendation engine
 └── models/
-    └── similarity_matrix.npy  # Precomputed Pokémon similarities
+    └── cf_model.json     # Saved model, created on first run (git-ignored)
 ```
 
 ## 🔬 Technical Details
@@ -81,7 +93,7 @@ pokemon-cf-recommender/
 **Algorithm**: Item-Item Collaborative Filtering
 - **Similarity Metric**: Cosine Similarity
 - **Data**: 1000+ synthetic competitive teams (or real Showdown data)
-- **Matrix**: 15×15 Pokémon similarity matrix
+- **Matrix**: N×N Pokémon similarity matrix over the Pokémon seen in the training teams (up to the 100 in `data/pokedex.json`)
 
 **Advantages:**
 - ✅ No domain knowledge needed
