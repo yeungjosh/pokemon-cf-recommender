@@ -60,6 +60,12 @@ pip install -r requirements.txt
 python app.py
 ```
 
+Run the unit tests (CF model and trio recommender) with:
+
+```bash
+python -m pytest tests
+```
+
 ## 📁 Project Structure
 
 ```
@@ -68,6 +74,8 @@ pokemon-cf-recommender/
 ├── data/
 │   ├── teams.json        # Real/synthetic team data
 │   └── pokedex.json      # Pokémon metadata
+├── tests/
+│   └── test_cf_model.py  # Unit tests for CF model and recommender
 ├── src/
 │   ├── data_generator.py # Generate synthetic team data
 │   ├── cf_model.py       # Collaborative filtering implementation
