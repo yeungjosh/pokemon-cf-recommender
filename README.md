@@ -68,6 +68,12 @@ are git-ignored.
 
 You can also regenerate just the team data with `python -m src.data_generator`.
 
+Run the unit tests (CF model and trio recommender) with:
+
+```bash
+python -m pytest tests
+```
+
 ## 📁 Project Structure
 
 ```
@@ -79,6 +85,8 @@ pokemon-cf-recommender/
 │   └── teams.json        # Generated on first run (git-ignored)
 ├── scripts/
 │   └── add_sprites.py    # Adds sprite URLs to pokedex.json
+├── tests/
+│   └── test_cf_model.py  # Unit tests for CF model and recommender
 ├── src/
 │   ├── app/explanations.py # Text explanations shown in the UI
 │   ├── data_generator.py # Generate synthetic team data
